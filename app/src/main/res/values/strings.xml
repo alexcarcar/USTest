@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">US Test</string>
+    <string name="show_answer">Show Answer</string>
+    <string name="new_question">New Question</string>
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+</resources>
