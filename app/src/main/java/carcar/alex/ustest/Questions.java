@@ -44,8 +44,7 @@ class Questions {
             {"How many justices are on the Supreme Court?", "nine (9)"},
             {"Who is the Chief Justice of the United States now?", "John G. Roberts, Jr."},
             {"Under our Constitution, some powers belong to the federal government. What is one power of the federal government?", "to print money, declare war, create an army, make treaties"},
-            {"Under our Constitution, some powers belong to the states. What is one power of the states?",
-                    "provide schooling and education, provide protection (police), provide safety (fire departments), give a driver's license, approve zoning and land use"},
+            {"Under our Constitution, some powers belong to the states. What is one power of the states?", "provide schooling and education, provide protection (police), provide safety (fire departments), give a driver's license, approve zoning and land use"},
             {"Who is the Governor of your state now?", "Jerry Brown"},
             {"What is the capital of your state?*", "Sacremento"},
             {"What are the two major political parties in the United States?*", "Democratic and Republican"},
@@ -106,18 +105,21 @@ class Questions {
             {"Name two national U.S. holidays.", "New Year's Day, Martin Luther King, Jr. Day, Presidents' Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving, Christmas"}
     };
 
-    private String question = "";
     private String answer = "";
+    private int index = 0;
 
     public String getQuestion() {
         Long x = Math.round(Math.random() * questions.length);
-        int pickQuestion = x.intValue();
-        question = questions[pickQuestion][0];
-        answer = questions[pickQuestion][1];
-        return question;
+        index = x.intValue();
+        answer = questions[index][1];
+        return questions[index][0];
     }
 
     public String getAnswer() {
         return answer;
+    }
+
+    int getIndex() {
+        return index;
     }
 }
